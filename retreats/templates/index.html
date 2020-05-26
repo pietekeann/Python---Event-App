@@ -1,0 +1,126 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<section id="header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mx-lg-5 my-5">You change the world by being yourself.</h2>
+    <div class="row">
+        <div class="col-sm-6 col-12">
+            <a href="retreats" class="btn rounded-0" id="btn-custom-inverse">FIND A RETREAT</a>
+        </div>
+        <div class="col-sm-6 col-12 mt-sm-0 mt-3">
+            <a href="host-retreat" class="btn rounded-0" id="btn-custom-white">HOST A RETREAT</a>
+        </div>
+    </div>
+    <div class="geometric-pattern"></div>
+</section>
+<section style="background-color:#F8F9FA; border:1px solid #D3D3D3;" class="py-5">
+    <div class="container text-center p-5">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <p style="font-size:18px;">
+                    Aloha Ke Akua is an intentional community rooted in the principles of permaculture, creating
+                    opportunities for physical, mental and emotional growth through retreats, events and immersive
+                    experiences. Located in the Sierra Nevada Mountains of northern Colombia, our place boasts a
+                    breath-taking view overlooking the sweeping mountains, down to the coast and as far as the eye can
+                    see.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="about" class="d-flex flex-column text-center">
+    <div class="container-fluid px-0">
+        <div class="row align-items-center mx-0">
+            <div class="col-lg-6 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/retreat.jpg' %}" />
+            </div>
+            <div class="col-lg-6 px-4 py-4 mt-5 mt-lg-0 order-1 order-lg-2">
+                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="our-vision">Community</h1></a>
+                <p>Our community is a diverse collective co-creating a shared vision, whilst celebrating individuality.
+                    Stay with us as a guest or volunteer and experience community life in the jungle.
+                </p>
+                <a href="our-vision" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Community</a>
+
+            </div>
+        </div>
+
+        <div class="row align-items-center mx-0">
+
+            <div class="col-lg-6 px-4 py-4 mt-5 mt-lg-0">
+                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="the-farm">The Farm</a>
+                </h1>
+                <p>Our farm strives to cultivate food self-sufficiency, while maintaining a harmonious and regenerative
+                    connection to the earth. </p>
+                <a href="the-farm" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Farm</a>
+            </div>
+            <div class="col-lg-6 px-0">
+                {% load static %}
+                <img src="{% static 'img/jason.jpg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+<section id="events">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 px-4">
+                <h1 class="mb-5 mt-2">Events</h1>
+                <p>We offer unique experiences designed to nurture personal empowerment, exploration and expansion. Join
+                    us for one of our many transformational events!</p>
+                <a href="retreats" class="btn rounded-0 btn-md mb-5" id="btn-custom">Explore Our Events</a>
+            </div>
+        </div>
+        <div class="row">
+            {% if event_list %}
+            {% for event in event_list %}
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    {% load static %}
+                    <img class="card-img-top" src="{% static 'img/cacao2.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ event.title }}</h4>
+                        <p class="card-date"><strong>{{ event.start_date|date:'F j'}} -
+                        {% if event.months_different %}
+                        {{ event.end_date|date:'j' }}
+                        {% else %}
+                        {{ event.end_date|date:'F j' }}
+                        {% endif %}
+                        </strong></p>
+                        <p class="card-text">{{ event.short_description }}</p>
+                        <a href="retreats/breathwork-workshop" class="btn rounded-0 btn-sm" id="btn-custom">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No events right now.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<section id="content" class="d-flex flex-column">
+    <div class="container">
+        <div class="row align-items-center my-5 text-center">
+            <div class="col-lg-6 px-md-2 mb-5 mb-md-0 mt-lg-0 order-1 order-lg-2">
+                <h1 class="display-5 mb-5">Retreat and Event Space</h1>
+                <p>With the completion of our beautiful temple comes the opportunity for us to host retreats run solely
+                    by, or in conjunction, with external providers. Packages can be tailored to your needs and desires
+                    and can include a combination of activities offered by us. </p>
+                <a class="btn btn-md rounded-0" id="btn-custom" href="host-retreat">Learn More</a>
+            </div>
+
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7XEEoPefQAM"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

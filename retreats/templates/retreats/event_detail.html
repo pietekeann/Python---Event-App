@@ -1,0 +1,120 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="{{event.title|cut:' ' }}"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">{{ event.title }}</h2>
+    <div class="geometric-pattern"></div>
+</section>
+
+<section id="content" class="text-center text-md-left">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-12">
+                <h2 class="retreat-date my-4">{{ event.start_date|date:'F j'}} -
+                    {% if event.months_different %}
+                    {{ event.end_date|date:'j' }}
+                    {% else %}
+                    {{ event.end_date|date:'F j' }}
+                    {% endif %}</h2>
+                <p>{{ event.description|linebreaks }}</p>
+                 {% if event.host %}
+                 <h2 class="my-4">About the Facilitator</h2>
+                 <p>{{ event.host|linebreaks }}</p>
+                 {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="d-flex justify-content-center align-items-center py-5 grey-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center text-md-left">
+                <h2 class="my-4">Facilities</h2>
+                {% for facility in event.facilities.all %}
+                <p>{{ facility.name }}</p>
+                {% endfor %}
+                <a href="the-space" class="btn rounded-0 btn-sm" id="btn-custom">Learn More</a>
+            </div>
+            {% if event.schedule %}
+            <div class="col-md-12 text-center text-md-left pt-4">
+                <h2 class="my-4">Schedule</h2>
+                <p>{{ event.schedule|linebreaks }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container text-center text-md-left">
+        <div class="row mt-3">
+            <div class="col-12 my-4">
+                <h2 class="mb-5">Register</h2>
+                <form method="POST" action="/retreat-send" class="needs-validation" novalidate>
+                    
+                    <input type="hidden" id="inputRetreatName" name="inputRetreatName" value="Purpose Spark Retreat">
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Full Name" required>
+                             <div class="invalid-feedback">
+                         Needs a name.
+                        </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="inputCountry" name="inputCountry" placeholder="Country">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" required>
+                             <div class="invalid-feedback">
+                         Needs a valid email.
+                        </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="phone" class="form-control" id="inputPhone" name="inputPhone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="inputInterest" name="inputInterest" rows="4" placeholder="Interest In Event"
+                            required></textarea>
+                             <div class="invalid-feedback">
+                         Please give us more information on your interest in the event.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="inputRequests" name="inputRequests" rows="4" placeholder="Other Requests?"
+                            ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-large rounded-0" id="btn-custom">Apply</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+#{{event.title|cut:' ' }} {
+  background: url("/static/img/jungle.jpg") center {{event.picture_position}}/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#{{event.title|cut:' ' }}:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/static/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+</style>
+{% endblock %}

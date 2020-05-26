@@ -1,0 +1,438 @@
+//FONTS
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("/fonts/Gotham-Thin.otf") format("opentype");
+}
+
+// VARIABLES
+$highlight-color: #3ed1e8;
+$main-font: 'Gotham',
+sans-serif;
+
+// INHERITENCE
+
+%button-transition {
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+%card-transition {
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+}
+
+// MIXINS
+
+@mixin clearfix {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@mixin background-overlay {
+    background: url('/img/black-thread.png');
+    -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+    clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+    opacity: .4;
+    height: 350px;
+}
+
+@mixin background-overlay-light {
+    background: url('/img/black-thread-light.png');
+    -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+    clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+    opacity: .8;
+    height: 350px;
+}
+
+@mixin header-overlay {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .3);
+    height: 300px;
+    color: white;
+}
+
+@mixin header-image($url) {
+    background: $url;
+    @include header-overlay;
+
+    &:before {
+        @include clearfix;
+        @include background-overlay;
+    }
+}
+
+@mixin header-image-light($url) {
+    background: $url;
+    @include header-overlay;
+
+    &:before {
+        @include clearfix;
+        @include background-overlay-light;
+    }
+}
+
+// GENERAL SELECTORS and CLASSES
+
+* {
+    font-family: $main-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h1 a {
+    font-family: "Gotham Thin";
+}
+
+p {
+    font-family: $main-font;
+    color: #686868;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    line-height: 2rem;
+}
+
+.grey-background {
+    background-color: #F8F9FA;
+    border: 1px solid lightgray;
+}
+
+.active {
+    color: $highlight-color !important;
+}
+
+
+// NAVBAR
+
+.navbar {
+    padding: 1rem 1rem !important;
+}
+
+.navbar-nav {
+    flex: 1;
+    justify-content: start;
+    align-content: start;
+}
+
+#mainNavbar {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border-bottom: 2px solid rgba(0, 0, 0, .125);
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: $highlight-color;
+    }
+}
+
+.navbar-collapse {
+    width: auto !important;
+
+}
+
+@media (max-width: 991px) {
+    .navbar.scrolled-top {
+        background: white;
+        transition: background 500ms;
+    
+        .nav-link {
+            color: black !important;
+        }
+    
+        .nav-link:hover {
+            color: $highlight-color;
+        }
+    
+        .navbar-toggler {
+            border-color: black;
+            color: black;
+        }
+    
+        .active {
+            color: $highlight-color !important;
+        }
+    }
+}
+
+.navbar.scrolled {
+    background: white;
+    transition: background 500ms;
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .nav-link:hover {
+        color: $highlight-color;
+    }
+
+    .navbar-toggler {
+        border-color: black;
+        color: black;
+    }
+
+    .active {
+        color: $highlight-color !important;
+    }
+}
+
+/* change navbar background on collapse */
+@media (max-width: 992px) {
+    .nav-link {
+        padding: 10px !important;
+    }
+
+    #btn-custom {
+        padding: 10px !important;
+    }
+
+    #nav-mobile {
+        padding-bottom: 20px !important;
+    }
+}
+
+
+// CUSTOM BUTTONS
+
+#btn-custom {
+    border: 1px $highlight-color solid;
+    color: $highlight-color !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+
+    &:hover {
+        background-color: $highlight-color;
+        color: white !important;
+        @extend %button-transition;
+    }
+}
+
+#btn-custom-inverse {
+    background-color: $highlight-color;
+    color: white !important;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    border: 1px solid white;
+
+    &:hover {
+        border: 1px $highlight-color solid;
+        color: $highlight-color !important;
+        background: transparent;
+        @extend %button-transition;
+    }
+}
+
+#btn-custom-white {
+    border: 1px white solid;
+    color: white !important;
+    padding: 10px;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: $highlight-color !important;
+        cursor: pointer;
+        @extend %button-transition;
+    }
+}
+
+// HEADER IMAGES
+
+// MAIN HEADER
+
+#header {
+    background: url("/img/feather.jpg") center center/cover no-repeat fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
+    height: 600px;
+    color: white;
+
+    &:before {
+        @include clearfix;
+        @include background-overlay;
+    }
+}
+
+#about-header {
+    @include header-image($url: url("/img/aloha_cabana.jpg") center center/cover no-repeat)
+}
+
+#host-retreat-header {
+    @include header-image($url: url("/img/gathering.jpg") center 25%/cover no-repeat)
+}
+
+#retreat-header {
+    @include header-image($url: url("/img/jungle.jpg") center center/cover no-repeat)
+}
+
+#the-space-header {
+    @include header-image-light($url: url("/img/aloha-temple-2.jpg") center center/cover no-repeat)
+}
+
+#womans-retreat-header {
+    @include header-image-light($url: url("/img/mudra.jpg") center center/cover no-repeat)
+}
+
+#kambo-header {
+    @include header-image($url: url("/img/kambo-alter.jpg") center center/cover no-repeat)
+}
+
+#yage-header {
+    @include header-image-light($url: url("/img/aloha-temple-2.jpg") center center/cover no-repeat)
+}
+
+#cacao-header {
+    @include header-image($url: url("/img/cacao-beans.jpg") center center/cover no-repeat)
+}
+
+#temazcal-header {
+    @include header-image($url: url("/img/lakota.jpg") center center/cover no-repeat)
+}
+
+#aloha-header {
+    @include header-image-light($url: url("/img/dorm_view.jpg") center 80%/cover no-repeat)
+}
+
+#directions-header {
+    @include header-image-light($url: url("/img/aloha_jungle.jpg") center center/cover no-repeat)
+}
+
+#connect-header {
+    @include header-image($url: url("/img/sunset.jpg") center 25%/cover no-repeat)
+}
+
+#kambo-retreat-header {
+    @include header-image($url: url("/img/kambo.jpg") center 25%/cover no-repeat)
+}
+
+#medicine-header {
+    @include header-image-light($url: url("/img/dream-catcher.JPG") center 25%/cover no-repeat)
+}
+
+#content img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+#about img {
+    width: 100%;
+}
+
+#retreat-about img {
+    width: 100%;
+}
+
+#events,
+#offerings {
+    padding-top: 40px;
+    background-color: #F8F9FA;
+    border: 1px solid lightgray;
+}
+
+// CARD SETTINGS
+
+.card-img-top {
+    height: 300px;
+}
+
+.card-date {
+    color: $highlight-color;
+    font-size: 17px;
+}
+
+// EVENT BOX SETTINGS 
+
+.icon img {
+    width: 10%;
+}
+
+.offering-box {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    color: black !important;
+    @extend %card-transition;
+
+    &:hover {
+        color: white !important;
+        background-color: $highlight-color;
+        @extend %card-transition;
+
+        p {
+            color: white;
+            @extend %card-transition;
+        }
+
+        .icon {
+            filter: invert(99%) sepia(96%) saturate(0%) hue-rotate(282deg) brightness(103%) contrast(100%);
+            @extend %card-transition;
+        }
+    }
+}
+
+// FOOTER SETTINGS
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, .125);
+
+    a {
+        color: $highlight-color;
+    }
+}
+
+
+.retreat-date,
+.anchor-color {
+    color: $highlight-color;
+}
+
+a:hover p,
+h2 {
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.anchor-header a {
+    color: black;
+
+    &:hover {
+        color: $highlight-color;
+        text-decoration: none !important;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header-mobile h2 {
+        font-size: 2.75rem !important;
+    }
+}
+
+#content-footer img {
+    width: 10%;
+}
+
+#content-footer a:hover {
+    img {
+        filter: invert(70%) sepia(98%) saturate(586%) hue-rotate(151deg) brightness(96%) contrast(89%);
+        @extend %card-transition;
+    }
+}
+
+#add-height {
+    height: 500px
+}

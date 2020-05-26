@@ -1,0 +1,937 @@
+@font-face {
+  font-family: "Gotham";
+  src: url('/static/fonts/Gotham-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Gotham Thin";
+  src: url('/static/fonts/Gotham-Thin.otf') format('opentype');
+}
+
+#btn-custom:hover, #btn-custom-inverse:hover, #btn-custom-white:hover {
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.offering-box, .offering-box:hover, .offering-box:hover p, .offering-box:hover .icon, #content-footer a:hover img {
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+}
+
+* {
+  font-family: "Gotham", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h1 a {
+  font-family: "Gotham Thin";
+}
+
+p {
+  font-family: "Gotham", sans-serif;
+  color: #686868;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 2rem;
+}
+
+.grey-background {
+  background-color: #F8F9FA;
+  border: 1px solid lightgray;
+}
+
+.active {
+  color: #3ed1e8 !important;
+}
+
+.navbar {
+  padding: 1rem 1rem !important;
+}
+
+.navbar-nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+
+#mainNavbar {
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+#mainNavbar .nav-link {
+  color: white;
+  
+}
+
+#mainNavbar .nav-link:hover {
+  color: #3ed1e8;
+}
+
+.navbar-collapse {
+  width: auto !important;
+}
+
+/* NEW */
+
+li {
+ display: block;
+ transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+.dropdown-content {
+    padding-left:0px !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color:black;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  z-index: 1;
+}
+
+.dropdown-content .nav-link {
+    color:black !important;
+}
+
+.dropdown-content .nav-link:hover {
+    color:#3ed1e8 !important;
+}
+
+.navbar-light .dropdown-content .nav-link:hover {
+    color:#3ed1e8 !important;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .navbar.scrolled-top {
+    background: white;
+    -webkit-transition: background 500ms;
+    transition: background 500ms;
+  }
+  .navbar.scrolled-top .nav-link {
+    color: black !important;
+  }
+  .navbar.scrolled-top .nav-link:hover {
+    color: #3ed1e8;
+  }
+  .navbar.scrolled-top .navbar-toggler {
+    border-color: black;
+    color: black;
+  }
+  .navbar.scrolled-top .active {
+    color: #3ed1e8 !important;
+  }
+}
+
+.navbar.scrolled {
+  background: white;
+  -webkit-transition: background 500ms;
+  transition: background 500ms;
+}
+
+.navbar.scrolled .nav-link {
+  color: black !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #3ed1e8;
+}
+
+.navbar.scrolled .navbar-toggler {
+  border-color: black;
+  color: black;
+}
+
+.navbar.scrolled .active {
+  color: #3ed1e8 !important;
+}
+
+/* change navbar background on collapse */
+@media (max-width: 992px) {
+  .nav-link {
+    padding: 10px !important;
+  }
+  #btn-custom {
+    padding: 10px !important;
+  }
+  #nav-mobile {
+    padding-bottom: 20px !important;
+  }
+}
+
+#btn-custom {
+  border: 1px #3ed1e8 solid;
+  color: #3ed1e8 !important;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#btn-custom:hover {
+  background-color: #3ed1e8;
+  color: white !important;
+}
+
+#btn-custom-inverse {
+  background-color: #3ed1e8;
+  color: white !important;
+  padding: 10px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid white;
+}
+
+#btn-custom-inverse:hover {
+  border: 1px #3ed1e8 solid;
+  color: #3ed1e8 !important;
+  background: transparent;
+}
+
+#btn-custom-white {
+  border: 1px white solid;
+  color: white !important;
+  padding: 10px;
+}
+
+#btn-custom-white:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #3ed1e8 !important;
+  cursor: pointer;
+}
+
+#header {
+  background: url("/static/img/feather.jpg") center center/cover no-repeat fixed;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  height: 600px;
+  color: white;
+}
+
+#header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/static/img/black-thread.png');
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#about-header {
+  background: url("/img/aloha_cabana.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#about-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/img/black-thread.png');
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#host-retreat-header {
+  background: url("/img/temple-done3.jpg") center 25%/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#host-retreat-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#retreat-header {
+  background: url("/static/img/jungle.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#retreat-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/static/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+/*#purpose-spark-header {*/
+/*  background: url("/img/purpose-spark2.jpg") center center/cover no-repeat;*/
+/*  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);*/
+/*          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);*/
+/*  height: 300px;*/
+/*  color: white;*/
+/*}*/
+
+/*#purpose-spark-header:before {*/
+/*  position: absolute;*/
+/*  content: '';*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  background: url("/img/black-thread.png");*/
+/*  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);*/
+/*  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);*/
+/*  opacity: .4;*/
+/*  height: 350px;*/
+/*}*/
+
+#farm-header {
+  background: url("/img/jungle.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#farm-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/static/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+
+#the-space-header {
+  background: url("/img/aloha-temple-2.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#the-space-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#accommodations-header {
+  background: url("/img/temple-done3.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#accommodations-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#womans-retreat-header {
+  background: url("/img/mudra.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#womans-retreat-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#thai-retreat-header {
+  background: url("/img/cacao2.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#thai-retreat-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+
+#ytt-retreat-header {
+  background: url("/img/yoga.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#ytt-retreat-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#fermentation-header {
+  background: url("/img/fermentation.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#fermentation-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+
+
+#cerro-hike-header {
+  background: url("/img/hike.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#cerro-hike-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#permaculture-retreat-header {
+  background: url("/img/permaculture-2.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#permaculture-retreat-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#newyears-retreat-header {
+  background: url("/img/sunset.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#newyears-retreat-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+#christmas-retreat-header {
+  background: url("/img/christmas.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#christmas-retreat-header:before {
+      position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+#kambo-header {
+  background: url("/img/kambo-alter.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#kambo-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#yage-header {
+  background: url("/img/aloha-temple-2.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#yage-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#cacao-header {
+  background: url("/img/cacao-beans.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#cacao-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#temazcal-header {
+  background: url("/img/lakota.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#temazcal-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#aloha-header {
+  background: url("/img/gathering.jpg") center 25%/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#aloha-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#directions-header {
+  background: url("/img/aloha_jungle.jpg") center center/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#directions-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#connect-header {
+  background: url("/img/sunset.jpg") center 25%/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#connect-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#kambo-retreat-header {
+  background: url("/img/kambo.jpg") center 25%/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#kambo-retreat-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+#medicine-header {
+  background: url("/img/dream-catcher.JPG") center 25%/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#medicine-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .8;
+  height: 350px;
+}
+
+#purpose-spark-header {
+  background: url("/img/purpose-spark2.jpg") center top/cover no-repeat;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  color: white;
+}
+
+#purpose-spark-header:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/black-thread-light.png");
+  -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
+  opacity: .4;
+  height: 350px;
+}
+
+
+#content img {
+  width: 100%;
+  border: 1px solid black;
+}
+
+#about img {
+  width: 100%;
+}
+
+#retreat-about img {
+  width: 100%;
+}
+
+#events,
+#offerings {
+  padding-top: 40px;
+  background-color: #F8F9FA;
+  border: 1px solid lightgray;
+}
+
+.card-img-top {
+  height: 300px;
+}
+
+.card-date {
+  color: #3ed1e8;
+  font-size: 17px;
+}
+
+.icon img {
+  width: 10%;
+}
+
+.offering-box {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+  color: black !important;
+}
+
+.offering-box:hover {
+  color: white !important;
+  background-color: #3ed1e8;
+}
+
+.offering-box:hover p {
+  color: white;
+}
+
+.offering-box:hover .icon {
+  -webkit-filter: invert(99%) sepia(96%) saturate(0%) hue-rotate(282deg) brightness(103%) contrast(100%);
+          filter: invert(99%) sepia(96%) saturate(0%) hue-rotate(282deg) brightness(103%) contrast(100%);
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+footer a {
+  color: #3ed1e8;
+}
+
+.retreat-date,
+.anchor-color {
+  color: #3ed1e8;
+}
+
+a:hover p,
+h2 {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.anchor-header a {
+  color: black;
+}
+
+.anchor-header a:hover {
+  color: #3ed1e8;
+  text-decoration: none !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .header-mobile h2 {
+    font-size: 2.75rem !important;
+  }
+}
+
+#content-footer img {
+  width: 10%;
+}
+
+#content-footer a:hover img {
+  -webkit-filter: invert(70%) sepia(98%) saturate(586%) hue-rotate(151deg) brightness(96%) contrast(89%);
+          filter: invert(70%) sepia(98%) saturate(586%) hue-rotate(151deg) brightness(96%) contrast(89%);
+}
+
+#add-height {
+  height: 500px;
+}
+/*# sourceMappingURL=main.css.map */
+
+.color-background:nth-child(odd) {
+  background-color: #f8f9fa;
+  border: 1px solid lightgray;
+}
