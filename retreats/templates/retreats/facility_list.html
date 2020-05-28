@@ -9,12 +9,12 @@
 <section id="content" class="d-flex flex-column text-md-left text-center pt-5">
     <div class="container-fluid retreat">
         <ul>
-            <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm my-3" id="btn-custom">Add Facility</a>
+            <a href="{% url "facility_create" %}" class="btn rounded-0 btn-sm my-3" id="btn-custom">Add Facility</a>
             {% if facility_list %}
             {% for facility in facility_list %}
             <li class="py-3">{{ facility.name }}
-                <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm" id="btn-custom">Edit</a>
-                <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm" id="btn-custom">Delete</a>
+                <a href="{% url "facility_update" facility.pk %}" class="btn rounded-0 btn-sm ml-2" id="btn-custom">Edit</a>
+                <a href="{% url "facility_delete" facility.pk %}" class="btn rounded-0 btn-sm" id="btn-custom">Delete</a>
             </li>
             {% endfor %}
             {% endif %}

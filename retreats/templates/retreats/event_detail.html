@@ -27,10 +27,11 @@
         </div>
     </div>
 </section>
-
+{% if event.facilities.count != 0 or event.schedule %}
 <section id="content" class="d-flex justify-content-center align-items-center py-5 grey-background">
     <div class="container">
         <div class="row">
+            {% if event.facilities.count != 0 %}
             <div class="col-md-12 text-center text-md-left">
                 <h2 class="my-4">Facilities</h2>
                 {% for facility in event.facilities.all %}
@@ -38,6 +39,7 @@
                 {% endfor %}
                 <a href="{% url 'the_space' %}" class="btn rounded-0 btn-sm" id="btn-custom">Learn More</a>
             </div>
+            {% endif %}
             {% if event.schedule %}
             <div class="col-md-12 text-center text-md-left pt-4">
                 <h2 class="my-4">Schedule</h2>
@@ -47,6 +49,8 @@
         </div>
     </div>
 </section>
+{% endif %}
+
 <section class="py-5">
     <div class="container text-center text-md-left">
         <div class="row mt-3">
@@ -98,7 +102,7 @@
 
 <style>
 #{{event.title|cut:' ' }} {
-  background: url("/media/{{ event.home_image }}") center {{event.picture_position}}/cover no-repeat;
+  background: url("/media/{{ event.home_image }}") center {{ event.position }}/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;

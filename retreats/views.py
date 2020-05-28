@@ -34,6 +34,21 @@ class EventDelete(LoginRequiredMixin, DeleteView):
 class FacilityList(LoginRequiredMixin, generic.ListView):
     model = Facility
 
+class FacilityCreate(LoginRequiredMixin, CreateView):
+    model = Facility
+    fields = '__all__'
+
+class FacilityDetail(LoginRequiredMixin, generic.DetailView):
+    model = Facility
+
+class FacilityUpdate(LoginRequiredMixin, UpdateView):
+    model = Facility
+    fields = '__all__'
+
+class FacilityDelete(LoginRequiredMixin, DeleteView):
+    model = Facility
+    success_url = reverse_lazy('facilities')
+
 def about(request):
     return render(request, 'about_us.html')
 

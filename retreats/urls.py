@@ -25,8 +25,8 @@ urlpatterns += [
     path('event/<int:pk>/delete/', views.EventDelete.as_view(), name='event_delete'),
 ]
 
-# urlpatterns += [  
-#     path('event/create/', views.EventCreate.as_view(), name='event_create'),
-#     path('event/<int:pk>/update/', views.EventUpdate.as_view(), name='event_update'),
-#     path('event/<int:pk>/delete/', views.EventDelete.as_view(), name='event_delete'),
-# ]
+urlpatterns += [  
+    path('facility/create/', views.FacilityCreate.as_view(), name='facility_create'),
+    path('facility/<int:pk>/update/', views.FacilityUpdate.as_view(), name='facility_update'),
+    path('facility/<int:pk>/delete/', views.FacilityDelete.as_view(), name='facility_delete'),
+]

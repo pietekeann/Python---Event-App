@@ -6,17 +6,16 @@ from datetime import date
 
 
 class Facility(models.Model):
-    name = models.CharField(max_length=500, help_text='Enter a Description (e.g. Food - Vegetarian Meal')
+    name = models.CharField(max_length=500)
 
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('facilities')
+
 class Image(models.Model):
     image = models.ImageField(upload_to='img/')
-
-# def validate_date(value):
-#     if self.end_date < self.start_date:
-#         raise ValidationError('Start Date must be before End Date')
 
 class Event(models.Model):
     title = models.CharField(max_length=200)
@@ -28,10 +27,10 @@ class Event(models.Model):
     end_date = models.DateField(blank=True, null=True)
     short_description = models.TextField(max_length=350, help_text='Enter a short description of the retreat')
     description = models.TextField(max_length=1500, help_text='Enter a description of the retreat')
-    facilities = models.ManyToManyField(Facility, help_text='Select the Facilities Present')
+    facilities = models.ManyToManyField(Facility, help_text='Select the Facilities Present', blank=True)
     host = models.TextField(max_length=1000, null=True, blank=True, help_text='Enter a description of the facilitator if there is one')
     schedule = models.TextField(max_length=1000, null=True, blank=True, help_text='Enter a description of the schedule if there is one')
-    picture_position = models.CharField(max_length=6, default='center')
+    picture_position = models.CharField(max_length=6, default='center', help_text='Type: up, down, or center to choose header image position ')
 
     class Meta:
         ordering = ['-start_date']
@@ -51,6 +50,15 @@ class Event(models.Model):
         if self.end_date:
             return self.end_date >= today
         return self.start_date >= today
+    
+    @property
+    def position(self):
+        if self.picture_position == 'up':
+            return '25%'
+        elif self.picture_position == 'center':
+            return 'center'
+        elif self.picture_position == 'down':
+            return '75%'
 
     @property
     def past_event(self):
