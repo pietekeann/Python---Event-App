@@ -79,7 +79,7 @@
             <div class="col-lg-4 mb-4">
                 <div class="card">
                     {% load static %}
-                    <img class="card-img-top" src="{% static 'img/cacao2.jpg' %}" alt="">
+                    <img class="card-img-top" src="/media/{{ event.home_image }}" />
                     <div class="card-body">
                         <h4 class="card-title">{{ event.title }}</h4>
                         <p class="card-date"><strong>{{ event.start_date|date:'F j'}} -

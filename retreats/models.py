@@ -11,14 +11,16 @@ class Event(models.Model):
     title = models.CharField(max_length=200)
   #  home_image = models.ImageField()
    # header_image = models.ImageField()
-    start_date = models.DateField(null=True, blank=True)
-    end_date = models.DateField(null=True, blank=True)
+    home_image = models.ImageField(upload_to='img/', blank=True, default='img/yoga.jpg')
+    start_date = models.DateField()
+    end_date = models.DateField()
     short_description = models.TextField(max_length=350, help_text='Enter a short description of the retreat')
     description = models.TextField(max_length=1500, help_text='Enter a description of the retreat')
     facilities = models.ManyToManyField(Facility, help_text='Select the Facilities Present')
     host = models.TextField(max_length=1000, null=True, blank=True, help_text='Enter a description of the facilitator if there is one')
     schedule = models.TextField(max_length=1000, null=True, blank=True, help_text='Enter a description of the schedule if there is one')
     picture_position = models.CharField(max_length=6, default='center')
+
 
     class Meta:
         ordering = ['-start_date']
