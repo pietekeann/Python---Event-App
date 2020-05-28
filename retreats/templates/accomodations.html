@@ -1,0 +1,65 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="accommodations-header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Accommodations</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 my-5">
+                <p>Aloha offers several varieties of retreats, ceremonies and rituals. Our commitment
+                    for each of
+                    these events is to provide a secure space for healing and the acquisition of self knowledge, to
+                    offer the most nutritious and delicious veg(etari)an food under the Sun, and to provide
+                    welcoming and comfortable accommodation to pass the night in well earned rest.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center px-3 py-4" style="background-color:#F8F9FA; border-top: 1px solid #d3d3d3;">
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1">
+                <h2 class="pb-3">Dorms</h2>
+                <p>Facing the west, our three cabanas (cabins) feature stunning views over the rolling mountains, down
+                    to the lakes of Cienaga, out to the ocean and as far as the eye can see. Each cabin holds two bunk
+                    beds protected by mosquito nets and a hammock for relaxing and enjoying the view. All are equipped
+                    with power sockets and personal lockers for your convenience, as well as roll down rain protectors
+                    to keep things dry in the wet season.
+                </p>
+            </div>
+            <div class="col-md-4 px-0 order-2 order-2">
+                {% load static %}
+                <img src="{% static 'img/aloha-dorm.jpeg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center px-3 py-4" style="background-color:#F8F9FA;">
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1">
+                <h2 class="pb-3">Loft (semi-private)</h2>
+                <p>Above the dorms are semi-private loft spaces with a double bed protected by a mosquito net. Suitable
+                    for a couple, these spaces share the view over Sierra Nevada mountains and down to the coast.
+                </p>
+            </div>
+            <div class="col-md-4 px-0 order-2">
+                {% load static %}
+                <img src="{% static 'img/loft.jpg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center px-3 py-4"
+            style="background-color:#F8F9FA; border-bottom: 1px solid #d3d3d3;">
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1">
+                <h2 class="pb-3">Indigenous Hut (private)</h2>
+                <p>With a double bed protected by a mosquito net, our private, stand-alone indigenous hut is ideal for a
+                    couple wanting to enjoy some personal space. Power sockets and hanging space for clothes are
+                    available for your convenience.
+                </p>
+            </div>
+            <div class="col-md-4 px-0 order-2">
+                {% load static %}
+                <img src="{% static 'img/private.jpg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

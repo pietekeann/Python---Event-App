@@ -7,6 +7,9 @@
 </section>
 <section id="content" class="d-flex flex-column text-md-left text-center">
     <div class="container-fluid retreat">
+        {% if user.is_authenticated %}
+        <a href="{% url "event_create" %}" class="btn rounded-0 btn-sm mt-5" id="btn-custom">Create Event</a>
+        {% endif %}
         {% if event_list %}
         {% for event in event_list %}
         <div class="row align-items-center px-2 py-3 color-background">
@@ -23,8 +26,11 @@
                     {{ event.end_date|date:'F j' }}
                     {% endif %}</strong></p>
                 <p>{{ event.short_description }}</p>
-                <a href="{{ event.get_absolute_url }}" class="btn rounded-0 btn-sm" id="btn-custom">Learn
-                    More</a>
+                <a href="{{ event.get_absolute_url }}" class="btn rounded-0 btn-sm" id="btn-custom">Learn More</a>
+                {% if user.is_authenticated %}
+                <a href="{% url "event_update" event.pk %}" class="btn rounded-0 btn-sm" id="btn-custom">Edit Event</a>
+                <a href="{% url "event_delete" event.pk %}" class="btn rounded-0 btn-sm" id="btn-custom">Delete Event</a>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

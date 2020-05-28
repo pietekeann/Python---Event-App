@@ -1,15 +1,14 @@
 {% extends "base_generic.html" %}
-
 {% block content %}
 <section id="header"
     class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
     <h2 class="display-4 mx-lg-5 my-5">You change the world by being yourself.</h2>
     <div class="row">
         <div class="col-sm-6 col-12">
-            <a href="retreats" class="btn rounded-0" id="btn-custom-inverse">FIND A RETREAT</a>
+            <a href="{% url 'events' %}" class="btn rounded-0" id="btn-custom-inverse">FIND A RETREAT</a>
         </div>
         <div class="col-sm-6 col-12 mt-sm-0 mt-3">
-            <a href="host-retreat" class="btn rounded-0" id="btn-custom-white">HOST A RETREAT</a>
+            <a href="{% url 'host' %}" class="btn rounded-0" id="btn-custom-white">HOST A RETREAT</a>
         </div>
     </div>
     <div class="geometric-pattern"></div>
@@ -39,11 +38,11 @@
                 <img src="{% static 'img/retreat.jpg' %}" />
             </div>
             <div class="col-lg-6 px-4 py-4 mt-5 mt-lg-0 order-1 order-lg-2">
-                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="our-vision">Community</h1></a>
+                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="{% url 'our_vision' %}">Community</h1></a>
                 <p>Our community is a diverse collective co-creating a shared vision, whilst celebrating individuality.
                     Stay with us as a guest or volunteer and experience community life in the jungle.
                 </p>
-                <a href="our-vision" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Community</a>
+                <a href="{% url 'our_vision' %}" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Community</a>
 
             </div>
         </div>
@@ -51,11 +50,11 @@
         <div class="row align-items-center mx-0">
 
             <div class="col-lg-6 px-4 py-4 mt-5 mt-lg-0">
-                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="the-farm">The Farm</a>
+                <h1 class="display-5 mb-5 px-md-5 anchor-header"><a href="{% url 'the_farm' %}">The Farm</a>
                 </h1>
                 <p>Our farm strives to cultivate food self-sufficiency, while maintaining a harmonious and regenerative
                     connection to the earth. </p>
-                <a href="the-farm" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Farm</a>
+                <a href="{% url 'the_farm' %}" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Farm</a>
             </div>
             <div class="col-lg-6 px-0">
                 {% load static %}
@@ -71,7 +70,7 @@
                 <h1 class="mb-5 mt-2">Events</h1>
                 <p>We offer unique experiences designed to nurture personal empowerment, exploration and expansion. Join
                     us for one of our many transformational events!</p>
-                <a href="retreats" class="btn rounded-0 btn-md mb-5" id="btn-custom">Explore Our Events</a>
+                <a href="{% url 'events' %}" class="btn rounded-0 btn-md mb-5" id="btn-custom">Explore Our Events</a>
             </div>
         </div>
         <div class="row">
@@ -91,7 +90,7 @@
                         {% endif %}
                         </strong></p>
                         <p class="card-text">{{ event.short_description }}</p>
-                        <a href="retreats/breathwork-workshop" class="btn rounded-0 btn-sm" id="btn-custom">Learn
+                        <a href="{{ event.get_absolute_url }}" class="btn rounded-0 btn-sm" id="btn-custom">Learn
                             More</a>
                     </div>
                 </div>
@@ -111,7 +110,7 @@
                 <p>With the completion of our beautiful temple comes the opportunity for us to host retreats run solely
                     by, or in conjunction, with external providers. Packages can be tailored to your needs and desires
                     and can include a combination of activities offered by us. </p>
-                <a class="btn btn-md rounded-0" id="btn-custom" href="host-retreat">Learn More</a>
+                <a class="btn btn-md rounded-0" id="btn-custom" href="{% url 'host' %}">Learn More</a>
             </div>
 
             <div class="col-lg-6 order-2 order-lg-1">

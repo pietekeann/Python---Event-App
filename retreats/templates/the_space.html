@@ -1,0 +1,144 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="the-space-header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">The Space</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 my-5">
+                <p>Aloha offers several varieties of retreats, ceremonies and rituals. Our commitment
+                    for each of
+                    these events is to provide a secure space for healing and the acquisition of self knowledge, to
+                    offer the most nutritious and delicious veg(etari)an food under the Sun, and to provide
+                    welcoming and comfortable accommodation to pass the night in well earned rest.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center grey-background px-3 py-4">
+            <div class="col-md-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/temple.jpg' %}" />
+            </div>
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1 order-lg-2">
+                <h1 class="display-5 mb-5 mb-md-3">Temple</h1>
+                <p>With a ten metre diameter, our recently completed temple offers the largest covered space on the
+                    farm. A fire pit in the middle creates a magical atmosphere for reflection, prayer, celebration and
+                    coming together. Our temple is the central space for ceremonies, workshops, sharing circles, yoga,
+                    playtime, relaxing in hammocks.. the possibilities are endless!
+
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mx-0 py-4">
+
+            <div class="col-lg-8 px-lg-4 px-3 py-4 mt-4 mt-lg-0">
+                <h1 class="display-5 mb-5">Kitchen</h1>
+                <p>As a community, we value meal time as an opportunity to come together as a family. From our
+                    fully-equipped kitchen, we provide three vegan/vegetarian meals per day, accounting for the
+                    individual needs of community members and guests alike. We are developing our farm with the goal to
+                    produce most of our ingredients on-site, with our harvest supplemented by the local produce from our
+                    neighbouring farmers. We also hold various nutritional workshops, including fermentation classes and
+                    germination demonstrations, in order to share the knowledge we have gained in providing a nutritious
+                    and balanced diet. Please be aware our kitchen is closed to guests, but we are happy to assist if
+                    you have any special requests.
+                </p>
+            </div>
+            <div class="col-lg-4 px-0 mb-lg-0 mb-5">
+                {% load static %}
+                <img src="{% static 'img/kitchen.jpg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center px-3 py-4" style="background-color:#F8F9FA; border-top: 1px solid #d3d3d3;">
+            <div class="col-md-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/aloha-dorm.jpeg' %}" />
+            </div>
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1 order-lg-2">
+                <h1 class="display-5 mb-5 mb-md-3 pb-3">Accomodations</h1>
+                <h4>Dorms</h4>
+                <p>Facing the west, our three cabanas (cabins) feature stunning views over the rolling mountains, down
+                    to the lakes of Cienaga, out to the ocean and as far as the eye can see. Each cabin holds two bunk
+                    beds protected by mosquito nets and a hammock for relaxing and enjoying the view. All are equipped
+                    with power sockets and personal lockers for your convenience, as well as roll down rain protectors
+                    to keep things dry in the wet season.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center px-3 py-4" style="background-color:#F8F9FA;">
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1">
+                <h4>Loft (semi-private)</h4>
+                <p>Above the dorms are semi-private loft spaces with a double bed protected by a mosquito net. Suitable
+                    for a couple, these spaces share the view over Sierra Nevada mountains and down to the coast.
+                </p>
+            </div>
+            <div class="col-md-4 px-0 order-2">
+                {% load static %}
+                <img src="{% static 'img/loft.jpg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center px-3 py-4"
+            style="background-color:#F8F9FA; border-bottom: 1px solid #d3d3d3;">
+            <div class="col-md-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/private.jpg' %}" />
+            </div>
+            <div class="col-md-8 px-lg-4 px-3 py-4 mt-3 mt-lg-0 order-1 order-lg-2">
+                <h4>Indigenous Hut (private)</h4>
+                <p>With a double bed protected by a mosquito net, our private, stand-alone indigenous hut is ideal for a
+                    couple wanting to enjoy some personal space. Power sockets and hanging space for clothes are
+                    available for your convenience.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mx-0 py-4">
+            <div class="col-lg-8 px-lg-4 px-3 py-4 mt-4 mt-lg-0">
+                <h1 class="display-5 mb-5">Bathrooms</h1>
+                <p>We share a bathroom comprised of two dry toilets and two hot showers. The toilets function in a
+                    closed cycle whereby no waste is produced and the organic materials are converted into a rich
+                    compost for the gardens. Our showers are heated by a passive solar tank fitted with inductive glass
+                    tubing, allowing community members to take a hot shower at any time of the day without any external
+                    energy input other than the sun.
+
+                </p>
+            </div>
+            <div class="col-lg-4 px-0 mb-lg-0 mb-5">
+                {% load static %}
+                <img src="{% static 'img/aloha-bathroom.jpeg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center grey-background px-3 py-4">
+            <div class="col-lg-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/hammock-hut.jpg' %}" />
+            </div>
+            <div class="col-lg-8 px-lg-4 px-3 py-4 mt-4 mt-lg-0 order-1 order-lg-2">
+                <h1 class="display-5 mb-5 mb-md-3">Hammock Hut</h1>
+                <p>In this space, we have several hammocks overhanging a beach-style sand floor. It is an excellent
+                    alternative to the temple when you wish to relax, study or have a rewarding conversation. With
+                    smaller groups or events, this space is sometimes preferable to the temple for its intimate
+                    atmosphere.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mx-0 py-4">
+            <div class="col-lg-8 px-lg-4 px-3 py-4 mt-4 mt-lg-0">
+                <h1 class="display-5 mb-5">Lounge Space</h1>
+                <p>We have two lounge spaces where everyone is welcome to hang out: one outside the main house and one
+                    inside. There is also a bookcase which you are welcome to borrow from during your stay. Although we
+                    encourage disconnection from technology and media, we occasionally offer documentary or movie
+                    evenings as a community activity and opportunity for learning.
+                </p>
+            </div>
+            <div class="col-lg-4 px-0 mb-lg-0 mb-5">
+                {% load static %}
+                <img src="{% static 'img/aloha-firepit.jpeg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

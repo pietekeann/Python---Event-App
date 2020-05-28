@@ -24,7 +24,7 @@
 
 <body>
     <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-lg fixed-top scrolled-top">
-        <a href="/" class="navbar-brand">
+        <a href="{% url 'index' %}" class="navbar-brand">
             {% load static %}
             <img src="{% static 'img/logo-transparent.png' %}" width="250" height="30">
         </a>
@@ -36,11 +36,11 @@
             <ul class="navbar-nav justify-content-end">
 
                 <li class="nav-item px-lg-1 px-md-1">
-                    <a class="nav-link" href="about">The Team</a>
+                    <a class="nav-link" href="{% url 'about_us' %}">The Team</a>
                 </li>
 
                 <li class="nav-item px-lg-1 px-md-1">
-                    <a class="nav-link" href="accommodations">Stay Here</a>
+                    <a class="nav-link" href="{% url 'accomodations' %}">Stay Here</a>
                 </li>
 
                 <div class="dropdown">
@@ -48,21 +48,21 @@
                         <a class="nav-link" href="#">Our Place <i class="fa fa-caret-down"></i></a>
                     </li>
                     <div class="dropdown-content">
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="our-vision">Our Community</a>
+                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'our_vision' %}">Our Community</a>
                         </li>
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="the-space">Our Space</a></li>
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="the-farm">Our Farm</a></li>
+                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'the_space' %}">Our Space</a></li>
+                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'the_farm' %}">Our Farm</a></li>
 
                     </div>
                 </div>
                 <li class="nav-item px-lg-1 px-md-1">
-                    <a class="nav-link" href="retreats">Events</a>
+                    <a class="nav-link" href="{% url 'events' %}">Events</a>
                 </li>
                 <li class="nav-item px-lg-1 px-md-1">
-                    <a class="nav-link" href="connect">Connect</a>
+                    <a class="nav-link" href="{% url 'connect' %}">Connect</a>
                 </li>
                 <li class="nav-item px-lg-1 px-md-1 mr-3">
-                    <a class="nav-link d-inline d-lg-block" id="btn-custom" href="host-retreat">Host a Retreat</a>
+                    <a class="nav-link d-inline d-lg-block" id="btn-custom" href="{% url 'host' %}">Host a Retreat</a>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="about-header"
+  class="jumbotron text-center d-flex justify-content-center align-items-center mb-0 header-mobile">
+  <h2 class="display-4 mt-5">Delete Event</h2>
+  <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+  <div class="container-fluid">
+    <div class="row align-items-center px-5 py-4 grey-background">
+      <div class="col-12">
+        <p>Are you sure you want to delete this event: {{ Event }}?</p>
+      </div>
+      <div class="col-12">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="Yes, delete.">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

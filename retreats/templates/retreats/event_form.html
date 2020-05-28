@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="about-header"
+    class="jumbotron text-center d-flex justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Create an Event</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container-fluid">
+        <div class="row align-items-center px-3 py-4 grey-background">
+            <form action="" method="post">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

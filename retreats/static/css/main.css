@@ -274,7 +274,7 @@ ul li ul li {
 }
 
 #about-header {
-  background: url("/img/aloha_cabana.jpg") center center/cover no-repeat;
+  background: url("/static/img/aloha_cabana.jpg") center center/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -288,7 +288,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('/img/black-thread.png');
+  background: url('/static/img/black-thread.png');
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .4;
@@ -296,7 +296,7 @@ ul li ul li {
 }
 
 #host-retreat-header {
-  background: url("/img/temple-done3.jpg") center 25%/cover no-repeat;
+  background: url("/static/img/temple-done3.jpg") center 25%/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -310,7 +310,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/black-thread.png");
+  background: url("/static/img/black-thread.png");
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .4;
@@ -362,7 +362,7 @@ ul li ul li {
 /*}*/
 
 #farm-header {
-  background: url("/img/jungle.jpg") center center/cover no-repeat;
+  background: url("/static/img/jungle.jpg") center center/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -385,7 +385,7 @@ ul li ul li {
 
 
 #the-space-header {
-  background: url("/img/aloha-temple-2.jpg") center center/cover no-repeat;
+  background: url("/static/img/aloha-temple-2.jpg") center center/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -399,7 +399,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/black-thread-light.png");
+  background: url("/static/img/black-thread-light.png");
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .8;
@@ -407,7 +407,7 @@ ul li ul li {
 }
 
 #accommodations-header {
-  background: url("/img/temple-done3.jpg") center center/cover no-repeat;
+  background: url("/static/img/temple.jpg") center center/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -421,7 +421,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/black-thread.png");
+  background: url("/static/img/black-thread.png");
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .8;
@@ -694,7 +694,7 @@ ul li ul li {
 }
 
 #aloha-header {
-  background: url("/img/gathering.jpg") center 25%/cover no-repeat;
+  background: url("/static/img/gathering.jpg") center 25%/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -708,7 +708,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/black-thread-light.png");
+  background: url("/static/img/black-thread-light.png");
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .8;
@@ -738,7 +738,7 @@ ul li ul li {
 }
 
 #connect-header {
-  background: url("/img/sunset.jpg") center 25%/cover no-repeat;
+  background: url("/static/img/sunset.jpg") center 25%/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -752,7 +752,7 @@ ul li ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/black-thread.png");
+  background: url("/static/img/black-thread.png");
   -webkit-clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   clip-path: polygon(100% 0, 8% 0, 0 0, 0 100%);
   opacity: .4;

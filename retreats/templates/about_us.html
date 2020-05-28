@@ -1,0 +1,72 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="about-header"
+    class="jumbotron text-center d-flex justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">About Aloha</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container-fluid">
+        <div class="row align-items-center px-3 py-4 grey-background">
+            <div class="col-lg-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/aloha-team.jpg' %}" />
+            </div>
+            <div class="col-lg-8 px-3 px-md-4 py-4 mt-3 mt-lg-2 order-1 order-lg-2">
+                <h1 class="display-5 mb-5">Who We Are</h1>
+                <p>At Aloha, the whole community was born through something of divine providence, a calling from the
+                    Universe, an ability to read the signs and a willingness to respond to them. We believe that there
+                    are no coincidences, that realising this dream is what we are destined to do here on this earth.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center py-4 mx-0">
+
+            <div class="col-lg-8 px-3 px-md-4 py-4 mt-3 mt-lg-2">
+                <h1 class="display-5 mb-5">Jason</h1>
+                <p>Jason came to Colombia as a traveler, hailing from Canada. He found himself searching for a deeper
+                    meaning to life, for a way to dedicate himself to something which had true significance. Through his
+                    communion with entheogenic plants he also realised that living in close harmony with the land was
+                    calling him, and when he arrived at Aloha he knew that he could achieve this dream.</p>
+            </div>
+            <div class="col-lg-4 px-0">
+                {% load static %}
+                <img src="{% static 'img/jason.jpg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center py-4 px-3 grey-background">
+            <div class="col-lg-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/max.jpg' %}" />
+            </div>
+            <div class="col-lg-8 px-3 px-md-4 mt-3 py-4 mt-lg-2 order-1 order-lg-2">
+                <h1 class="display-5 mb-5">Max</h1>
+                <p>Max, originally from England, arrived in Colombia with the hopes of creating a school of
+                    permaculture, and with dreams of building a bridge between modern concepts and technology and the
+                    ancestral wisdom and heart opening plants of the indigenous tribes of South America. He is committed
+                    to empowering people to grow their own food, to build their own dwellings, and to nurture individual
+                    freedom through voluntary cooperative action.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center py-4 mx-0">
+
+            <div class="col-lg-8 px-3 px-md-4 py-4 mt-3 mt-lg-2">
+                <h1 class="display-5 mb-5">Rike</h1>
+                <p>Rike came as a response to the call for more feminine energy on the farm. Aloha immediately felt like
+                    home to her when she first arrived in December 2016 and it has been since. Apart from her passions:
+                    yoga, exploring nature and walking barefoot, she has grown in the community holding women´s circles,
+                    giving Yoga classes and cooking delicious vegan food. The healing power of community, nature and the
+                    Sacred Medicines have allowed her to live a dream she had never imagined living when she started her
+                    travels in Colombia.
+                </p>
+            </div>
+            <div class="col-lg-4 px-0 mb-lg-0 mb-5">
+                {% load static %}
+                <img src="{% static 'img/rike.jpg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

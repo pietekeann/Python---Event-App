@@ -22,10 +22,6 @@ class Event(models.Model):
 
     class Meta:
         ordering = ['-start_date']
-    
-    @property
-    def is_pastEvent(self):
-        return self.end_date < date.today()
 
     @property
     def months_different(self):

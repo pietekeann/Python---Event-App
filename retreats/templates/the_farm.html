@@ -1,0 +1,43 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="farm-header"
+    class="jumbotron text-center d-flex justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Our Farm</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container-fluid">
+        <div class="row align-items-center py-4 px-2 px-md-4 grey-background">
+            <div class="col-12">
+            </div>
+            <div class="col-lg-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/minca.jpg' %}" />
+            </div>
+            <div class="col-lg-8 px-lg-4 px-2 py-4 mt-2 mt-lg-0 order-1 order-lg-2">
+                <p>We, at Aloha, live by the principles of permaculture, with the aim to cultivate intensive and diverse
+                    agricultural systems and to build with sustainable methods and materials local to our region. With
+                    an ever-expanding garden, our ultimate goal is to be self-sustainable, growing as much food on our
+                    own land as we can in order to meet our needs. In the meantime, we source available fruits and
+                    vegetables from our farming neighbours to support our local economy and local food production.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mx-0 py-4">
+            <div class="col-12">
+            </div>
+            <div class="col-lg-8 px-lg-4 px-2 py-4 mt-2 mt-lg-0">
+                <p>Through the philosophy of permaculture, we are able to feel the empowerment and guidance to work
+                    closely with the land, and to form a deep and harmonious connection with our surroundings. We
+                    believe that by working towards spiritual evolution within ourselves, we can manifest abundance in
+                    our co-created material realm.
+                </p>
+            </div>
+            <div class="col-lg-4 px-0">
+                {% load static %}
+                <img src="{% static 'img/bagiera.jpg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

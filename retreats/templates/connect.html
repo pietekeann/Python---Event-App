@@ -1,0 +1,68 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="connect-header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Let's Connect</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="retreat-about">
+    <div class="container">
+        <div class="row mt-3 text-center">
+            <div class="col-12 my-4">
+                <p>If you wish to come and share some time with us, to learn about our way of life, our methods and
+                    techniques for working with nature, or if you’re interested in offering a workshop or event that is
+                    in alignment with what we do at the farm, please get in touch!
+                </p>
+                <p>To connect with us, please fill out the form below or email us alohakeakua@tutanota.com. We will be
+                    happy to answer any questions or inquiries you may have! Much love.
+                </p>
+            </div>
+        </div>
+        <div class="row text-center text-md-left">
+            <div class="col-12 mb-5">
+                <div class="form-header">
+                    <h2>Send us a message</h2>
+                </div>
+                <form method="POST" action="/send" class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 ">
+                            <input type="text" class="form-control" id="inputName" name="inputName"
+                                placeholder="Full Name" required>
+                            <div class="invalid-feedback">
+                                Needs a name.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail"
+                                placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Needs a valid email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="inputAbout" name="inputAbout" rows="4" placeholder="Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-large rounded-0" id="btn-custom">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-3 mx-0 grey-background">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 py-5">
+                <h1 class="mb-5">How To Get Here</h1>
+                <p>From Santa Marta, the cheapest option is to take a colectivo (shared mini-bus) from the Minca station
+                    in the central market (8.000 COP). Alternatively, you can take a taxi or moto. Motos leave Santa
+                    Marta from Buenavista, Mamatoco and Yucal. When you arrive in Minca, you have 3 options to get to
+                    us: you can walk for free (2-4 hours, depending on physical abilities), take a mototaxi (40mins,
+                    25.000 COP) or hire a car (50mins, prices available at the CootrasMinca Station).
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

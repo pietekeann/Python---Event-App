@@ -1,0 +1,86 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="aloha-header"
+    class="jumbotron text-center d-flex justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Our Community</h2>
+
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="text-md-left text-center">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 px-lg-5 mt-5 mb-3 mb-md-0">
+                <p>At Aloha, we feel that living in community is one of the most influential opportunities for growth.
+                    Through the constant feedback loop provided while living and working with a close group of people,
+                    we continually learn more about ourselves than we would ever imagine. Although many people who visit
+                    or stay at Aloha share similar perspectives, beliefs and visions, the individuality of each person
+                    is respected and celebrated. We encourage the sharing of knowledge, skills, wisdom and perspectives,
+                    and appreciate the personal expansion it facilitates. From this individual growth, a strong and
+                    cohesive community is born.</p>
+                <p>
+
+                    Each day is dynamic here at Aloha. We always have projects on the go, personally and collectively,
+                    and on large and small scales. With this, and the regular flow of new faces walking through the
+                    door, comes the opportunity to learn and experience something new every day. We stand by the motto
+                    “Come to teach, come to be taught” - and we invite you to do just that. Whether you’re joining us
+                    for a night or a month, please come as you are, offer what you have to teach and be ready to receive
+                    the bountiful gifts that community life has to give.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row align-items-center py-4 px-2 px-md-4 grey-background">
+            <div class="col-12">
+                <h1 class="display-5 my-4">Giving Back</h1>
+            </div>
+            <div class="col-lg-4 px-0 order-2 order-lg-1">
+                {% load static %}
+                <img src="{% static 'img/minca.jpg' %}" />
+            </div>
+            <div class="col-lg-8 px-lg-4 px-2 py-4 mt-2 mt-lg-0 order-1 order-lg-2">
+                <p>With our belief in community comes our desire to connect with and give back to the people in our
+                    region. Our ventures so far have included offering employment opportunities to members of the
+                    extended community, purchasing supplies for local schools, facilitating yoga classes for people in
+                    the region, collaborating on maintaining shared infrastructure, purchasing produce from neighbours
+                    and partnering with local businesses. We also work alongside and support various indigenous
+                    communities of the Sierra Nevada, the Heart of The World, growing with the knowledge they carry and
+                    co-protecting this sacred land.
+
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mx-0 py-4">
+            <div class="col-12">
+                <h1 class="display-5 my-4 px-2">Experience Our Community</h1>
+            </div>
+            <div class="col-lg-8 px-lg-4 px-2 py-4 mt-2 mt-lg-0">
+                <h4>Be Our Guest</h4>
+                <p>We welcome you to come and spend time with us here at Aloha. If you need a beautiful space to rest,
+                    relax and connect with nature, we invite you to enjoy our beautiful land and facilities as a guest.
+                    You’re welcome to spend time alone, or immerse yourself with the community as much as you desire.
+                    Please contact us for pricing and availability.
+                </p>
+                <a href="{% url 'the_space' %}" class="btn rounded-0 btn-md" id="btn-custom">Discover Our Space</a>
+            </div>
+            <div class="col-lg-4 px-0">
+                {% load static %}
+                <img src="{% static 'img/bagiera.jpg' %}" />
+            </div>
+        </div>
+        <div class="row align-items-center py-4 px-2 px-md-4">
+            <div class="col-lg-8 px-lg-4 px-2 py-4 mt-0 ">
+                <h4 class="display-5 mb-4">Join Our Team</h4>
+                <p>If you’re seeking a rewarding community experience, to put your hands in the earth and help out with
+                    our farm, ongoing projects and daily operations, we invite you to come and spend time with us as a
+                    volunteer. Please contact us for more information.
+                </p>
+            </div>
+            <div class="col-lg-4 px-0">
+                {% load static %}
+                <img src="{% static 'img/permaculture.jpg' %}" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

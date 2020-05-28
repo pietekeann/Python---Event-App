@@ -1,0 +1,108 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="host-retreat-header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Host a Retreat</h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="apply-retreat">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-12 my-5 text-center">
+                <h4 class="mb-2">Let's Collaborate</h4>
+                <p>Aloha offers an ideal space to hold retreats, workshops and other events. Boasting a beautiful, large
+                    temple, comfortable accommodations, delicious vegan food, hot showers and more, we invite you to
+                    facilitate your event at our home in the stunning Sierra Nevada.
+                </p>
+                <a href="{% url 'the_space' %}" class="btn rounded-0 btn-md" id="btn-custom">Explore Our Space</a>
+            </div>
+        </div>
+        <div class="row mt-3 grey-background px-3">
+            <div class="col-12 my-5 text-center">
+                <h1 class="mb-5">Tailored Packages</h1>
+                <p>It's up to you how much you would like us to be involved. Whether you'd prefer we simply take care of
+                    the facilities and catering or be more involved in facilitating community-style activities, we're
+                    happy to tailor-make a package to suit your needs. Optional activities provided by us include:
+                </p>
+                <p>Yoga and meditation classes</p>
+                <p>Evening fires with live music </p>
+                <p>Cacao ceremonies</p>
+                <p>Day hikes to waterfalls and/or Minca (local town)</p>
+                <p> Overnight hike to Cerro Kennedy, featuring views of sweeping valleys and snow peaks
+                </p>
+                <p>Nutrition workshops and fermentation classes </p>
+                <p>Permaculture theory and techniques</p>
+                <p>Cleansing mud baths and herb baths</p>
+
+            </div>
+        </div>
+        <h4 class="my-5">Please contact us for more information or to express interest.</h4>
+        <form method="POST" action="/host-send" class="needs-validation mb-5" novalidate>
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputTitle" name="inputTitle"
+                    placeholder="Title of Retreat">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Full Name"
+                        required>
+                    <div class="invalid-feedback">
+                        Name required.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Company">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email"
+                        required>
+                    <div class="invalid-feedback">
+                        Email address required.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="phone" class="form-control" id="inputPhone" name="inputPhone" placeholder="Phone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputStart">Start Date</label>
+                    <input type="text" class="form-control" id="inputStart" name="inputStart" placeholder="dd/mm/yyyy"
+                        required>
+                    <div class="invalid-feedback">
+                        Please give a potential start date.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEnd">End Date</label>
+                    <input type="text" class="form-control" id="inputEnd" name="inputEnd" placeholder="dd/mm/yyyy"
+                        required>
+                    <div class="invalid-feedback">
+                        Please give a potential end date.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="inputAbout" rows="4" name="inputAbout"
+                    placeholder="Description of Retreat" required></textarea>
+                <div class="invalid-feedback">
+                    Please tell us more about your retreat.
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputParticipants" name="inputParticipants"
+                    placeholder="Number of Estimated Participants">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="inputRequests" name="inputRequests" rows="4"
+                    placeholder="Other Requests?"></textarea>
+            </div>
+            <div class="text-center text-md-left">
+                <button type="submit" class="btn btn-large" id="btn-custom">Apply</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

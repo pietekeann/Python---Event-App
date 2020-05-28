@@ -34,7 +34,7 @@
                 {% for facility in event.facilities.all %}
                 <p>{{ facility.name }}</p>
                 {% endfor %}
-                <a href="the-space" class="btn rounded-0 btn-sm" id="btn-custom">Learn More</a>
+                <a href="{% url 'the_space' %}" class="btn rounded-0 btn-sm" id="btn-custom">Learn More</a>
             </div>
             {% if event.schedule %}
             <div class="col-md-12 text-center text-md-left pt-4">
