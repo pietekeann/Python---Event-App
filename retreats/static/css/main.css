@@ -296,7 +296,7 @@ ul li ul li {
 }
 
 #host-retreat-header {
-  background: url("/static/img/temple-done3.jpg") center 25%/cover no-repeat;
+  background: url("/static/img/temple.jpg") center 25%/cover no-repeat;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   height: 300px;
@@ -934,4 +934,14 @@ h2 {
 .color-background:nth-child(odd) {
   background-color: #f8f9fa;
   border: 1px solid lightgray;
+}
+
+.color-background-past:nth-child(even) {
+  background-color: #f8f9fa;
+  border: 1px solid lightgray;
+}
+
+.errorlist li {
+  padding-left: 100px;
+  color: red;
 }

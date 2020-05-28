@@ -31,6 +31,9 @@ class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
     success_url = reverse_lazy('events')
 
+class FacilityList(LoginRequiredMixin, generic.ListView):
+    model = Facility
+
 def about(request):
     return render(request, 'about_us.html')
 

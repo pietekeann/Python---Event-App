@@ -82,12 +82,15 @@
                     <img class="card-img-top" src="/media/{{ event.home_image }}" />
                     <div class="card-body">
                         <h4 class="card-title">{{ event.title }}</h4>
-                        <p class="card-date"><strong>{{ event.start_date|date:'F j'}} -
+                        <p class="card-date"><strong>{{ event.start_date|date:'F j'}}
+                        {% if event.end_date != null %}     -
                         {% if event.months_different %}
                         {{ event.end_date|date:'j' }}
                         {% else %}
                         {{ event.end_date|date:'F j' }}
                         {% endif %}
+                        {% endif %}
+                        {% if event.past_event %}(Past Event){% endif %}
                         </strong></p>
                         <p class="card-text">{{ event.short_description }}</p>
                         <a href="{{ event.get_absolute_url }}" class="btn rounded-0 btn-sm" id="btn-custom">Learn

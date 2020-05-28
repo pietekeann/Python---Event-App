@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section id="retreat-header"
+    class="jumbotron text-center d-flex flex-column justify-content-center align-items-center mb-0 header-mobile">
+    <h2 class="display-4 mt-5">Facilities
+    </h2>
+    <div class="geometric-pattern"></div>
+</section>
+<section id="content" class="d-flex flex-column text-md-left text-center pt-5">
+    <div class="container-fluid retreat">
+        <ul>
+            <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm my-3" id="btn-custom">Add Facility</a>
+            {% if facility_list %}
+            {% for facility in facility_list %}
+            <li class="py-3">{{ facility.name }}
+                <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm" id="btn-custom">Edit</a>
+                <a href="{% url 'facilities' %}" class="btn rounded-0 btn-sm" id="btn-custom">Delete</a>
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

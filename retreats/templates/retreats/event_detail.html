@@ -10,11 +10,13 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-12">
-                <h2 class="retreat-date my-4">{{ event.start_date|date:'F j'}} -
+                <h2 class="retreat-date my-4">{{ event.start_date|date:'F j'}}
+                    {% if event.end_date != null %} -
                     {% if event.months_different %}
                     {{ event.end_date|date:'j' }}
                     {% else %}
                     {{ event.end_date|date:'F j' }}
+                    {% endif %}
                     {% endif %}</h2>
                 <p>{{ event.description|linebreaks }}</p>
                  {% if event.host %}

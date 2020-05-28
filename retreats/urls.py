@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('events/', views.EventList.as_view(), name='events'),
     path('events/<int:pk>', views.EventDetail.as_view(), name='event-detail'),
+    path('facilities/', views.FacilityList.as_view(), name='facilities'),
 ]
 
 urlpatterns += [  
@@ -23,3 +24,9 @@ urlpatterns += [
     path('event/<int:pk>/update/', views.EventUpdate.as_view(), name='event_update'),
     path('event/<int:pk>/delete/', views.EventDelete.as_view(), name='event_delete'),
 ]
+
+# urlpatterns += [  
+#     path('event/create/', views.EventCreate.as_view(), name='event_create'),
+#     path('event/<int:pk>/update/', views.EventUpdate.as_view(), name='event_update'),
+#     path('event/<int:pk>/delete/', views.EventDelete.as_view(), name='event_delete'),
+# ]
