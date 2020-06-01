@@ -7,7 +7,7 @@
 </section>
 <section id="content" class="text-md-left text-center">
   <div class="container-fluid">
-      <div class="row align-items-center px-3 py-4 grey-background">
+      <div style='display:inline' class="row align-items-center px-3 py-4 grey-background">
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
@@ -20,7 +20,7 @@
       <p>Please login to see this page.</p>
     {% endif %}
   {% endif %}
-  
+  <div class='text-center login'>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
@@ -33,12 +33,14 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
+    <input class='my-3' type="submit" value="Login" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
-  
   {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  <div class='col-12 text-center'><p><a href="{% url 'password_reset' %}">Lost password?</a></p></div>
+  <div class='col-12 text-center'><p><a href="{% url 'logout' %}">Log Out</a></p></div>
+</div>
+
   </div>
   </div>
   </section>

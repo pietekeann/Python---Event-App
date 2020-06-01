@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from PIL import Image
+from django.core.mail import send_mail
 
 def index(request):
     event_list = Event.objects.order_by('-start_date')[:3]
@@ -65,7 +66,17 @@ def the_farm(request):
     return render(request, 'the_farm.html')
 
 def connect(request):
+
+    name = request.POST.get('inputName', '')
+    email = request.POST.get('inputEmail', '')
+    message = request.POST.get('inputAbout', '')
+
+    if request.method == 'POST' and email and name: 
+        send_mail('Message from Connect Form',
+        message, email, ['pietekemacmahon@gmail.com'], fail_silently=False)
+        return redirect('index')
     return render(request, 'connect.html')
+
 
 def host(request):
     return render(request, 'host.html')

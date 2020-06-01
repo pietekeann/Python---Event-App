@@ -945,3 +945,11 @@ h2 {
   padding-left: 100px;
   color: red;
 }
+
+.login {
+  background-color: white !important;
+}
+
+.login form {
+  display: inline-block;
+}

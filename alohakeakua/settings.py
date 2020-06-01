@@ -25,7 +25,7 @@ SECRET_KEY = 'h!=rvth#xenoi0*9^wi(f8nscje+xmc)5=8_d)-e1&!!0h6_&e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -128,3 +128,11 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.alohakeakuaretreat.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'info@alohakeakuaretreat.com'
+EMAIL_HOST_PASSWORD = 'Holistic123!'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False

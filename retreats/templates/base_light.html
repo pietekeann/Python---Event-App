@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:image" content="/img/retreat.jpg" />
+        <meta property="og:image" content="/img/retreat.jpg" />
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
-    <!-- <base href="/"> -->
+    <base href="/">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    {% load static %}
-    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <title>Aloha Ke Akua Retreat</title>
 </head>
 <body>
-    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-lg fixed-top scrolled-top">
-        <a href="{% url 'index' %}" class="navbar-brand">
+    <!-- Nav Bar -->
+    <nav id="mainNavbar" class="navbar navbar-light navbar-expand-lg fixed-top scrolled">
+        <a href="/" class="navbar-brand">
             {% load static %}
-            <img src="{% static 'img/logo-transparent.png' %}" width="250" height="30">
+            <img src="{% static 'img/aloha-logo.png' %}" width="250" height="30">
         </a>
         <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navLinks"
             aria-label="Toggle navigation">
@@ -31,31 +32,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navLinks">
             <ul class="navbar-nav justify-content-end">
-
+               
                 <li class="nav-item px-lg-1 px-md-1">
                     <a class="nav-link" href="{% url 'about_us' %}">The Team</a>
                 </li>
-
-                <li class="nav-item px-lg-1 px-md-1">
+                
+                 <li class="nav-item px-lg-1 px-md-1">
                     <a class="nav-link" href="{% url 'accomodations' %}">Stay Here</a>
                 </li>
-
+                
                 <div class="dropdown">
-                    <li class="nav-item px-lg-1 px-md-1">
-                        <a class="nav-link" href="#">Our Place <i class="fa fa-caret-down"></i></a>
-                    </li>
-                    <div class="dropdown-content">
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'our_vision' %}">Our Community</a>
-                        </li>
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'the_space' %}">Our Space</a></li>
-                        <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'the_farm' %}">Our Farm</a></li>
-
-                    </div>
-                </div>
-                <li class="nav-item px-lg-1 px-md-1">
+               <li class="nav-item px-lg-1 px-md-1">
+                     <a class="nav-link" href="#">Our Place <i class="fa fa-caret-down"></i></a> 
+                      </li>
+                     <div class="dropdown-content">
+                      <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="our-{% url 'our_vision' %}">Our Community</a></li>
+                      <li class="nav-item px-lg-1 px-md-1"><a class="nav-link" href="{% url 'the_space' %}">Our Space</a></li>
+                      <li class="nav-item px-lg-1 px-md-1"><a  class="nav-link" href="{% url 'the_farm' %}">Our Farm</a></li>
+                     
+                 </div>
+                 </div>
+                  <li class="nav-item px-lg-1 px-md-1">
                     <a class="nav-link" href="{% url 'events' %}">Events</a>
                 </li>
-                <li class="nav-item px-lg-1 px-md-1">
+               <li class="nav-item px-lg-1 px-md-1">
                     <a class="nav-link" href="{% url 'connect' %}">Connect</a>
                 </li>
                 <li class="nav-item px-lg-1 px-md-1 mr-3">
@@ -78,9 +78,6 @@
                     <a href="http://facebook.com/alohakeakuaretreat" target="_blank">
                         {% load static %}
                         <img src="{% static 'img/facebook.svg' %}"></a>
-                </div>
-                <div class="col-12 text-md-left text-center">
-                <a href="{% url 'login'%}">Admin</a>
                 </div>
             </div>
         </div>
@@ -116,5 +113,4 @@
         })();
     </script>
 </body>
-
 </html>
